@@ -4,10 +4,10 @@ public class Rocket {
 	int x;
 	int y;
 	
-	private char up;
-	private char down;
-	private char left;
-	private char right;
+	private final char up;
+	private final char down;
+	private final char left;
+	private final char right;
 	
 	public Rocket(int sx, int sy, String controls) {
 		this.x = sx;

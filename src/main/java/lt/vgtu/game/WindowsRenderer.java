@@ -9,12 +9,12 @@ import javax.imageio.ImageIO;
 
 public class WindowsRenderer {
 
-	private List<Rocket> rockets;
-	private Map map;
+	private final List<Rocket> rockets;
+	private final Map map;
 	
-	private BufferedImage flameImg;
-	private BufferedImage rocketImg;
-	private BufferedImage asteroidImg;
+	private final BufferedImage flameImg;
+	private final BufferedImage rocketImg;
+	private final BufferedImage asteroidImg;
 	
 	public WindowsRenderer(Map map, List<Rocket> rockets) throws Exception {
 		this.map = map;

@@ -15,10 +15,10 @@ import javax.swing.SwingUtilities;
 public class WindowsMain  extends JFrame implements KeyListener{
 	private static final long serialVersionUID = 1L;
 	
-	private List<Rocket> rockets = new ArrayList<>();
-	private Map map = new Map();
-	private WindowsRenderer renderer = new WindowsRenderer(map, rockets);
-	private GameRules gameRules = new GameRules(map, rockets);
+	private final List<Rocket> rockets = new ArrayList<>();
+	private final Map map = new Map();
+	private final WindowsRenderer renderer = new WindowsRenderer(map, rockets);
+	private final GameRules gameRules = new GameRules(map, rockets);
 	
 	public WindowsMain() throws Exception {
 		super.setPreferredSize(new Dimension(1200, 600));

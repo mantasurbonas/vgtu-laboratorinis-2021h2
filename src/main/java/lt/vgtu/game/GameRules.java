@@ -4,8 +4,8 @@ import java.util.List;
 
 public class GameRules {
 
-	private List<Rocket> rockets;
-	private Map map;
+	private final List<Rocket> rockets;
+	private final Map map;
 	private boolean userPressedQuit = false;
 
 	public GameRules(Map map, List<Rocket> rockets) {
