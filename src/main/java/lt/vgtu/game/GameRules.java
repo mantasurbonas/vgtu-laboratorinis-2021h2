@@ -15,7 +15,7 @@ public class GameRules {
 	
 	public boolean hasHitAsteroid() {
 		for (Rocket rocket: rockets)
-			if (map.getElement(rocket.x, rocket.y) != 0 || map.getElement(rocket.x+1, rocket.y)  != 0)
+			if (map.getElement(rocket.getXCoordinates(), rocket.getYCoordinates()) != 0 || map.getElement(rocket.getXCoordinates()+1, rocket.getYCoordinates())  != 0)
 				return true;
 				
 		return false;
