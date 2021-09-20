@@ -25,8 +25,8 @@ public class WindowsMain  extends JFrame implements KeyListener{
 		super.pack();
 		super.setVisible(true);
 
-		rockets.add(new Rocket(3, 10, "wsad",map.getWidth(),map.getHeight()));
-		rockets.add(new Rocket(5, 12, "ikjl",map.getWidth(),map.getHeight()));
+		rockets.add(new Rocket(3, 10, "wsad"));
+		rockets.add(new Rocket(5, 12, "ikjl"));
 
 		super.addKeyListener(this);
 
@@ -54,7 +54,7 @@ public class WindowsMain  extends JFrame implements KeyListener{
 		gameRules.processUserCommand(userCommand);
 
 		for (Rocket rocket: rockets)
-			rocket.processUserCommand(userCommand);
+			rocket.processUserCommand(userCommand,map.getWidth(),map.getHeight());
 
 		if (gameRules.isGameOver())
 			System.exit(1);

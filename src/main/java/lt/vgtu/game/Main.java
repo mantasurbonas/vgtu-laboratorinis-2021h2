@@ -7,13 +7,11 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		final Map map = new Map();
-
 		final List<Rocket> rockets = new ArrayList<>();
-		rockets.add(new Rocket(3, 10, "wsad",map.getWidth(),map.getHeight()));
-		rockets.add(new Rocket(5, 12, "ikjl",map.getWidth(),map.getHeight()));
+		rockets.add(new Rocket(3, 10, "wsad"));
+		rockets.add(new Rocket(5, 12, "ikjl"));
 
-
+		final Map map = new Map();
 
 		final ConsoleRenderer renderer = new ConsoleRenderer(map, rockets);
 
@@ -26,7 +24,7 @@ public class Main {
 			gameRules.processUserCommand(userCommand);
 
 			for (Rocket rocket: rockets)
-				rocket.processUserCommand(userCommand);
+				rocket.processUserCommand(userCommand,map.getWidth(),map.getHeight());
 		}
 	}
 

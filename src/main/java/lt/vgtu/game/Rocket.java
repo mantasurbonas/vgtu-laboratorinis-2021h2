@@ -9,10 +9,7 @@ public class Rocket {
 	private char left;
 	private char right;
 
-	private final int maxWidth;
-	private final int maxHeight;
-
-	public Rocket(int sx, int sy, String controls, int maxWidth, int maxHeight) {
+	public Rocket(int sx, int sy, String controls) {
 		this.x = sx;
 		this.y = sy;
 
@@ -20,13 +17,9 @@ public class Rocket {
 		this.down = controls.charAt(1);
 		this.left = controls.charAt(2);
 		this.right = controls.charAt(3);
-
-		this.maxWidth=maxWidth;
-		this.maxHeight=maxHeight;
-
 	}
 
-	public void processUserCommand(int n) {
+	public void processUserCommand(int n,int maxWidth, int maxHeight) {
 		if (n == left && this.x!=0)
 			this.x -= 1;
 		else
