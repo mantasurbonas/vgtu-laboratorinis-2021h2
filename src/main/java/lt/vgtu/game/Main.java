@@ -18,7 +18,7 @@ public class Main {
 		
 		GameRules gameRules = new GameRules(map, rockets);
 		
-		while (gameRules.isGameOver() == false) {
+		while (!gameRules.isGameOver()) {
 			renderer.render();
 			
 			int userCommand = System.in.read();
