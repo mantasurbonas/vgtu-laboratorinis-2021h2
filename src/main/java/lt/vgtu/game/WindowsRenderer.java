@@ -9,13 +9,16 @@ import javax.imageio.ImageIO;
 
 public class WindowsRenderer {
 
+  private static final int IMG_INITIAL_X_OFFSET_PX = 50;
+	private static final int IMG_SIZE_PX = 20;
+  
 	private final List<Rocket> rockets;
 	private final Map map;
 	
 	private final BufferedImage flameImg;
 	private final BufferedImage rocketImg;
 	private final BufferedImage asteroidImg;
-	
+
 	public WindowsRenderer(Map map, List<Rocket> rockets) throws Exception {
 		this.map = map;
 		this.rockets = rockets;
@@ -44,19 +47,23 @@ public class WindowsRenderer {
 		}	
 	}
 
+	private int calculateImgPos(int rawPos) {
+		return IMG_INITIAL_X_OFFSET_PX + rawPos * IMG_SIZE_PX;
+	}
+
 	private void drawSpace(Graphics g, int x, int y) {
 	}
 
 	private void drawRocketHead(Graphics g, int x, int y) {
-		g.drawImage(rocketImg, 50+x*20, 50+y*20, 20, 20, null);
+		g.drawImage(rocketImg, calculateImgPos(x), calculateImgPos(y), IMG_SIZE_PX, IMG_SIZE_PX, null);
 	}
 
 	private void drawRocketTail(Graphics g, int x, int y) {
-		g.drawImage(this.flameImg, 50+x*20, 50+y*20, 20, 20, null);
+		g.drawImage(flameImg, calculateImgPos(x), calculateImgPos(y), IMG_SIZE_PX, IMG_SIZE_PX, null);
 	}
 
 	private void drawAsteroid(Graphics g, int x, int y) {
-		g.drawImage(this.asteroidImg, 50+x*20, 50+y*20, 20, 20, null);
+		g.drawImage(asteroidImg, calculateImgPos(x), calculateImgPos(y), IMG_SIZE_PX, IMG_SIZE_PX, null);
 	}
 	
 	private boolean isRocketHead(int x, int y) {
