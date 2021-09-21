@@ -26,7 +26,7 @@ public class Main {
             gameRules.processUserCommand(userCommand);
 
             for (Rocket rocket : rockets)
-                if (!gameRules.isOutofBounds(rocket, map.getWidth(), map.getHeight(), userCommand)) {
+                if (!gameRules.isOutofBounds(rocket, userCommand)) {
                     rocket.processUserCommand(userCommand);
                 }
         }

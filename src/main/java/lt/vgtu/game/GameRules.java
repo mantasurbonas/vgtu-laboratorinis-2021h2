@@ -21,14 +21,14 @@ public class GameRules {
         return false;
     }
 
-    public boolean isOutofBounds(Rocket rocket, int maxWidth, int maxHeight, int userCommand) {
+    public boolean isOutofBounds(Rocket rocket, int userCommand) {
         if (userCommand == rocket.getLeft() && rocket.x == 0)
             return true;
-        else if (userCommand == rocket.getRight() && rocket.x == maxWidth - 2)
+        else if (userCommand == rocket.getRight() && rocket.x == map.getWidth() - 2)
             return true;
         else if (userCommand == rocket.getUp() && rocket.y == 0)
             return true;
-        else return userCommand == rocket.getDown() && rocket.y == maxHeight - 1;
+        else return userCommand == rocket.getDown() && rocket.y == map.getHeight() - 1;
     }
 
     public boolean isGameOver() {
