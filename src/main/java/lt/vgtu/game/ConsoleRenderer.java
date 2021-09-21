@@ -4,8 +4,8 @@ import java.util.List;
 
 public class ConsoleRenderer {
 
-	private List<Rocket> rockets;
-	private Map map;
+	private final List<Rocket> rockets;
+	private final Map map;
 
 	public ConsoleRenderer(Map map, List<Rocket> rockets) {
 		this.map = map;
