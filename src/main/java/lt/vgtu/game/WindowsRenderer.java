@@ -9,15 +9,15 @@ import javax.imageio.ImageIO;
 
 public class WindowsRenderer {
 
-	private static final int IMG_INITIAL_X_OFFSET_PX = 50;
+  private static final int IMG_INITIAL_X_OFFSET_PX = 50;
 	private static final int IMG_SIZE_PX = 20;
-
-	private List<Rocket> rockets;
-	private Map map;
+  
+	private final List<Rocket> rockets;
+	private final Map map;
 	
-	private BufferedImage flameImg;
-	private BufferedImage rocketImg;
-	private BufferedImage asteroidImg;
+	private final BufferedImage flameImg;
+	private final BufferedImage rocketImg;
+	private final BufferedImage asteroidImg;
 
 	public WindowsRenderer(Map map, List<Rocket> rockets) throws Exception {
 		this.map = map;
