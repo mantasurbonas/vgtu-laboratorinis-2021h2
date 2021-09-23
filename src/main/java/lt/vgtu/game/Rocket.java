@@ -1,8 +1,8 @@
 package lt.vgtu.game;
 
 public class Rocket {
-	int x;
-	int y;
+	private int x;
+	private int y;
 	
 	private char up;
 	private char down;
@@ -31,5 +31,13 @@ public class Rocket {
 		else
 		if (n == down)
 			this.y += 1;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
 	}
 }

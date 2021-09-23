@@ -33,7 +33,7 @@ public class ConsoleRenderer {
 	
 	private boolean isRocketHead(int x, int y) {
 		for (Rocket rocket: rockets)
-			if (rocket.x+1 ==x && rocket.y == y)
+			if (rocket.getX()+1 ==x && rocket.getY() == y)
 				return true;
 		
 		return false;
@@ -41,7 +41,7 @@ public class ConsoleRenderer {
 
 	private boolean isRocketTail(int x, int y) {
 		for (Rocket rocket: rockets)
-			if (rocket.x ==x && rocket.y == y)
+			if (rocket.getX() ==x && rocket.getY() == y)
 				return true;
 		
 		return false;
