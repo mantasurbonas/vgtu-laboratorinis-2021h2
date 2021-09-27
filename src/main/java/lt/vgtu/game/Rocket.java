@@ -1,8 +1,8 @@
 package lt.vgtu.game;
 
 public class Rocket {
-	int x;
-	int y;
+	private int x;
+	private int y;
 	
 	private char up;
 	private char down;
@@ -18,6 +18,14 @@ public class Rocket {
 		this.left = controls.charAt(2);
 		this.right = controls.charAt(3);
 	}
+
+    public getXCoordinates() {
+        return this.x;
+    }
+
+    public getYCoordinates() {
+        return this.y;
+    }
 	
 	public void processUserCommand(int n) {
 		if (n == left)

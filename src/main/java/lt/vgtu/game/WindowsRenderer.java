@@ -68,7 +68,7 @@ public class WindowsRenderer {
 	
 	private boolean isRocketHead(int x, int y) {
 		for (Rocket rocket: rockets)
-			if (rocket.x+1 ==x && rocket.y == y)
+			if (rocket.getXCoordinates()+1 ==x && rocket.getYCoordinates() == y)
 				return true;
 		
 		return false;
@@ -76,7 +76,7 @@ public class WindowsRenderer {
 
 	private boolean isRocketTail(int x, int y) {
 		for (Rocket rocket: rockets)
-			if (rocket.x ==x && rocket.y == y)
+			if (rocket.getXCoordinates() ==x && rocket.getYCoordinates() == y)
 				return true;
 		
 		return false;
